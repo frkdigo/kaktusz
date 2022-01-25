@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "h h h h"
+                         "n n n n"
+                         "s s s s"
+                         "as a a a"
+                         "f f f f";
+}
+header {
+    grid-area: h;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00bfff;
+    border: 3px solid #0088cc;
+    border-radius: 10px;
+    margin: 10px;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+nav{
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    grid-area: n;
+    display: flex;
+    margin: auto;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: #1E90FF;
+}
+nav a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: yellow;
+    font-size: 25px;
+}
+nav a:hover{
+    background-color: #00BFFF;
+}
+.active {
+    padding: 5px 10px;
+    background-color: #00bfff;
+    border-radius: 5px;
+}
+aside {
+    grid-area: as;
+    width: 100%;
+    border: 3px solid #0088cc;
+    border-radius: 10px;
+    background-color: #00bfff;
+}
+aside img {
+    width: 300px;
+}
+article {
+    grid-area: a;
+    width: 100%;
+    border: 3px solid #0088cc;
+    border-radius: 10px;
+    background-color: #00bfff;
+    margin-left: 20px;
+    padding: 30px;
+    font-size: 20px;
+}
+article ul {
+    list-style: decimal;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+article ul li {
+    font-size: 1.2rem;
+}
+footer {
+    grid-area: f;
+    width: 100%;
+    height: 50px;
+    border: 3px solid #0088cc;
+    border-radius: 10px;
+    background-color: #00bfff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    color: white;
+}
+section {
+    grid-area: s;
+    width: 100%;
+}
+.kepek {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.kepek img {
+    width: 100%;
+    border: 3px solid #0088cc;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        max-width: 100%;
+        grid-template-areas: "h"
+                             "n"
+                             "s"
+                             "as"
+                             "a"
+                             "f";
+    }
+    article {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    aside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav {
+        display: block;
+        max-width: 100%;
+        text-align: center;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
